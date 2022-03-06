@@ -2,28 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./frontend/style.css" />
-    <title>Week-2-Task</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    *,
+    *::after*::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 100px;
+        text-align: left;
+        background-color: rgb(235, 48, 110);
+    }
+    
+    * {
+        box-sizing: border-box
+    }
+    /* Add padding to containers */
+    
+    .container {
+        padding: 0 30px;
+        outline: none;
+        border-radius: 10px;
+        background-color: rgba(20, 15, 20, 0.917);
+        flex-wrap: wrap;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .h {
+        border: 1px solid #000000;
+        margin-bottom: 25px;
+        color: rgb(0, 0, 0);
+    }
+    
+    #form {
+        margin: 60px;
+        top: 50%;
+        left: 50%;
+        width: 450px;
+    }
+    
+    textarea,
+    fieldset {
+        width: 100%;
+        border: 1px solid #333;
+        box-sizing: border-box;
+    }
+</style>
 
 <body>
-    <div class="main">
-        <h1>Week 2 Task</h1>
-        <div class="form">
-            <h2>contact Us</h2>
-            <input class="name" name="name" placeholder="NAME">
-            <input class="email" name="email" placeholder="EMAIL">
-            <input class="phone" name="phone" placeholder="PHONE">
-            <input class="email" name=git init "email" placeholder="MESSAGE">
-            <button onclick="cancel()" class="btn"><a href="#">CANCEL</a></button>
-            <button onclick="send()" class="btn"><a href="#">SEND</a></button>
 
+
+    <div class="container" algin="left">
+
+        <div class="main">
+            <div class=" form ">
+                <h1 style="color: rgb(209, 46, 6);">
+                    CONTACT <br>US </h1>
+                <form align="center " action=" " method="get ">
+                    <input class="name " name="name " placeholder="NAME ">
+                    <p><input class="email " name="email " placeholder="EMAIL " required></p>
+                    <p><input class="phone " name="phone " placeholder="PHONE "></p>
+                    <p><input class="email " name="email" maxlength="140" rows="5" placeholder="MESSAGE "></p>
+                    <a href="# " onclick="alert(this) ">CANCEL</a> <a href="# " onclick="alert(this) ">SEND</a>
+
+                </form>
+
+            </div>
         </div>
-    </div>
 </body>
 <script src=" ./frontend/script.js "></script>
+
+
+</body>
 
 </html>

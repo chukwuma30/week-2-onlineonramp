@@ -7,6 +7,16 @@ let name = document.querySelector('input[type=text]');
 let email = document.querySelector('input[type=email]');
 
 let number = document.querySelector('input[type=tel]');
+const email = document.getElementById("mail");
+
+email.addEventListener("input", function(event) {
+    if (email.validity.typeMismatch) {
+        email.setCustomValidity("I am expecting an e-mail address!");
+        email.reportValidity();
+    } else {
+        email.setCustomValidity("");
+    }
+});
 /*
 let msg = document.getElementById('msg');
 cancel.addEventListener('click'.() => {
