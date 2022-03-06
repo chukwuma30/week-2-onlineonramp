@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Login page </title>
+    <script type="text/JavaScript">
+        function validate(form) { var returnValue=true; if(frmLogin.txtUserName.value.length
+        < 6) { returnValue=false; alert( "Your username must be at least\n6 characters
+                    long.\nPlease try again."); frmLogin.txtUserName.value="" ; frmLogin.txtUserName.focus(); return returnValue; } if (frmLogin.txtPassword1.value.length < 6) { returnValue=f alse; alert(
+            "Your password must be at least\n6 characters long.\n Please try again."); frmLogin.txtPassword1.value="" ; frmLogin.txtPassword2.value="" ; frmLogin.txtPassword1.focus(); return returnValue; } if (frmLogin.txtPassword1.value !=f rmRegister.txtPassword2.value) { turnValue=f alse; alert(
+            "Your password entries did not match.\nPlease try again."); frmLogin.txtPassword1.value="" ; frmLogin.txtPassword2.value="" ; frmLogin.txtPassword1.focus(); return returnValue; } if(returnValue!=false) { alert( "You are successfully login................. \n
+                    THANK YOU........................"); return returnValue; } } </script>
+</head>
+
+<body>
+    <h1 align="center"> LOGIN IN ACCOUNT.............</h1>
+    <form name="frmLogin" method="post" action="" onsubmit="return validate(this);">
+        <table align="center">
+            <tr>
+                <td align="right">User Name
+                    <p>
+                </td>
+                <td><input align="right" type="text" name="txtUserName" size="12" />
+                    <p>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Password
+                    <p>
+                </td>
+                <td><input type="password" name="txtPassword1" size="12" />
+                    <p>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Reenter Password
+                    <p>
+                </td>
+                <td><input type="password" name="txtPassword2" size="12" />
+                    <p>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="submit" value="Log in" /></th>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
