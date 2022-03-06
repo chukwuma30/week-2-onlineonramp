@@ -1,34 +1,28 @@
-const cancel = document.querySelector('.cancel');
+const clearInput = () => {
+    let input = document.querySelectorAll(".textbox");
+    input.forEach(element => {
+        element.value = "";
+    });
+}
 
-const send = document.querySelector('.send');
+const Send = () => {
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    let mobile = document.querySelector("#mobile").value;
+    let message = document.querySelector("#message").value;
 
-let name = document.querySelector('input[type=text]');
-
-let email = document.querySelector('input[type=email]');
-
-let number = document.querySelector('input[type=tel]');
-const email = document.getElementById("mail");
-
-email.addEventListener("input", function(event) {
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity("I am expecting an e-mail address!");
-        email.reportValidity();
-    } else {
-        email.setCustomValidity("");
+    if (name === "" || email === "" || mobile === "" || message === "") {
+        window.alert("all input boxes must be filled");
     }
-});
-/*
-let msg = document.getElementById('msg');
-cancel.addEventListener('click'.() => {
-    name.value = '';
-    email.value = '';
-    number.value = '';
-    msg.value = '';
-});
+    if (name !== "" && email !== "" && mobile !== "" && message !== "") {
+        if (isNaN(mobile)) {
+            window.alert("phone number field must only contain numbers");
+        } else if (message.length > 100) {
+            window.alert("message field cannot have more than 100 characters");
+        } else {
+            window.alert("welcome user");
+        }
 
-send.addEventListener('click'.() => {
-            let msg Arr = Array.from(msg.value);
+    }
 
-            if (email.value = '' || name.value = '
-                ' || msg = .value)
-            });*/
+}
